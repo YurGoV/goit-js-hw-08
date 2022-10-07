@@ -102,7 +102,7 @@ function writingDataToForm(field){
 function cLog(event) {
     console.log(event.target.name);
 
-    key = event.target.name;
+    const key = event.target.name;
     if(!webData) {
         console.log('FFFFFFF');
         webData = {

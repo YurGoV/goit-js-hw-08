@@ -27,7 +27,7 @@ function onSubmitButtonClick(event) {
     const {
         elements: { email, message }
      } = event.target;
-     formData = {
+     const formData = {
         email: email.value,
         message: message.value,
      }

@@ -115,7 +115,7 @@ function cLog(event) {
     // console.log(event.target);
     console.log(event.target.value);
 
-    value = event.target.value;
+    const value = event.target.value;
     webData[key] = value;
 
     // console.log(formData[key]);

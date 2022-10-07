@@ -15,11 +15,11 @@ refForm.addEventListener('input', throttle(cLog, 500))
 // });
 
 const savedForm = localStorage.getItem('feedback-form-state');
-console.log(savedForm.length);
-console.log(savedForm);
-console.log(JSON.parse(savedForm));
+// console.log(savedForm.length);
+// console.log(savedForm);
+// console.log(JSON.parse(savedForm));
 const formWebData = JSON.parse(savedForm);
-console.log(Object.entries(formWebData));
+// console.log(Object.entries(formWebData));
 
 // const formDataTest
 // if(!formData) {
@@ -29,7 +29,7 @@ console.log(Object.entries(formWebData));
 //     }
 // }
 
-console.log(formWebData);
+// console.log(formWebData);
 
 // let formData = {
 //     email: formWebData.email,
@@ -44,13 +44,13 @@ refFormMessage.value = formWebData.message;
 function cLog(event) {
     // console.log(event.target.name);
     key = event.target.name;
-    console.log(key);
+    // console.log(key);
     // console.log(event.target);
     // console.log(event.target.value);
     value = event.target.value;
     formWebData[key] = value;
     // console.log(formData[key]);
-    console.log(formWebData);
+    // console.log(formWebData);
     // console.log(typeof key);
     localStorage.setItem('feedback-form-state', JSON.stringify(formWebData))
 }

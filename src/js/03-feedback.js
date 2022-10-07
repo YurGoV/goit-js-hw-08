@@ -15,18 +15,31 @@ refForm.addEventListener('input', throttle(cLog, 500))
 // });
 
 const savedForm = localStorage.getItem('feedback-form-state');
+console.log(savedForm.length);
+console.log(savedForm);
 console.log(JSON.parse(savedForm));
-const FormData = JSON.parse(savedForm);
+const formWebData = JSON.parse(savedForm);
+console.log(Object.entries(formWebData));
 
-let formData = {
-    email: FormData.email,
-    message: FormData.message,
-}
+// const formDataTest
+// if(!formData) {
+//     formData = {
+//         email: '',
+//         messaghe: '',
+//     }
+// }
 
-refFormEmail.value = FormData.email;
-refFormMessage.value = FormData.message;
+console.log(formWebData);
 
-console.log(formData);
+// let formData = {
+//     email: formWebData.email,
+//     message: formWebData.message,
+// }
+
+refFormEmail.value = formWebData.email;
+refFormMessage.value = formWebData.message;
+
+// console.log(formData);
 
 function cLog(event) {
     // console.log(event.target.name);
@@ -35,11 +48,11 @@ function cLog(event) {
     // console.log(event.target);
     // console.log(event.target.value);
     value = event.target.value;
-    formData[key] = value;
+    formWebData[key] = value;
     // console.log(formData[key]);
-    console.log(formData);
+    console.log(formWebData);
     // console.log(typeof key);
-    localStorage.setItem('feedback-form-state', JSON.stringify(formData))
+    localStorage.setItem('feedback-form-state', JSON.stringify(formWebData))
 }
 
 

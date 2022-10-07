@@ -115,7 +115,7 @@ function cLog(event) {
     // console.log(event.target);
     console.log(event.target.value);
 
-    const value = event.target.value;
+    const value = event.target.value;//bugFix
     webData[key] = value;
 
     // console.log(formData[key]);
@@ -128,5 +128,3 @@ function cLog(event) {
 
 
 // localStorage.removeItem('feedback-form-state');//перевірка при відсутності даних у сховищі
-
-

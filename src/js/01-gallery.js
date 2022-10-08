@@ -26,13 +26,10 @@ function openModal(event) {
     event.preventDefault();//не даємо відкриватися імг-шці за замовченням
 }
 
-// ініціалізуємо SimpleLightbox
-let lightbox = new SimpleLightbox('.gallery a', {
-    // close: false,
-    // showCounter: false,
-    // captions: true,
+let lightbox = new SimpleLightbox('.gallery a', {// ініціалізуємо SimpleLightbox
+    // captions: true,//by default
     captionsData: 'alt',
     captionDelay: 250,
-    // captionPosition: 'bottom',
+    // captionPosition: 'bottom',//by default
 });
 

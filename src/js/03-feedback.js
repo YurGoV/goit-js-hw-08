@@ -7,9 +7,9 @@ const refFormEmail = document.querySelector('form input[type=email]');
 const refFormMessage = document.querySelector('form textarea[name=message]');
 const refFormSubmitButton = document.querySelector('button');
 
-refForm.addEventListener('input', throttle(cLog, 500))
+refForm.addEventListener('input', throttle(onFormType, 500))
 
-function cLog(event) {
+function onFormType(event) {
 
     const key = event.target.name;
 
@@ -39,6 +39,10 @@ function onSubmitButtonClick(event) {
         message: message.value,
      }
 
+    if (email.value === '' || message.value === '') {
+        return alert("Повинні бути заповнені\nяк електронна пошта так і текст повідомлення>");
+    }
+
     console.log(formData);
 
     event.currentTarget.reset();
@@ -53,8 +57,6 @@ let webData = JSON.parse(savedForm);
 
 refFormEmail.value = writingDataToForm('email');
 refFormMessage.value = writingDataToForm('message');
-
-
 
 function writingDataToForm(field){
     if (webData === null) {

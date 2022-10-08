@@ -66,3 +66,5 @@ function writingDataToForm(field){
 }
 
 // localStorage.removeItem('feedback-form-state');//перевірка чи працює при відсутності даних у сховищі
+
+
